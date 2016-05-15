@@ -1,0 +1,11 @@
+sudo: false
+language: csharp
+
+addons:
+  apt:
+    sources:
+    - php-cli
+ 
+script:
+ - xbuild /p:Configuration=Release Peachpie.sln
+ - ./tests/runtests.sh
